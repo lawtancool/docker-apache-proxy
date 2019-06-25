@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#Remove default configs
+rm -rf /etc/apache2/sites-available/*
 #Copy virtualhost on apache directory
 cp /opt/proxy-conf/*.conf /etc/apache2/sites-available/
 
