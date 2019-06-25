@@ -20,7 +20,7 @@ RUN a2enmod proxy \
 && service apache2 stop
 
 #Ports
-EXPOSE 80 443
+EXPOSE 443
 
 #Volumes
 VOLUME /opt/proxy-conf
