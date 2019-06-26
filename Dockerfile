@@ -27,7 +27,7 @@ RUN a2enmod proxy \
 VOLUME ["/etc/apache2"]
 
 #Copy config to be copied back by entrypoint script in bind mount situations
-COPY /etc/apache2 /etc/apache2-initial-config
+RUN cp -r /etc/apache2 /etc/apache2-initial-config
 #Launch Apache2 on FOREGROUND
 COPY apache-proxy-start.sh /opt/
 RUN chmod +x /opt/apache-proxy-start.sh
