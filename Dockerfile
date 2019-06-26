@@ -13,8 +13,8 @@ RUN apt update \
 apache2 \
 nano
 
-RUN a2enmod proxy \
-&& a2enmod proxy_http \
+#RUN a2enmod proxy \
+RUN a2enmod proxy_http \
 && a2enmod ssl \
 && a2enmod rewrite \
 && a2enmod proxy_wstunnel \
