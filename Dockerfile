@@ -3,6 +3,7 @@ FROM debian:latest
 
 MAINTAINER DiouxX "github@diouxx.be"
 
+VOLUME ["/etc/apache2"]
 #Don't ask questions during install
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -23,7 +24,7 @@ RUN a2enmod proxy \
 EXPOSE 443
 
 #Volumes
-VOLUME /opt/proxy-conf
+#VOLUME /opt/proxy-conf
 
 #Launch Apache2 on FOREGROUND
 COPY apache-proxy-start.sh /opt/
