@@ -17,6 +17,7 @@ RUN a2enmod proxy \
 && a2enmod ssl \
 && a2enmod rewrite \
 && a2enmod proxy_wstunnel \
+&& a2enmod proxy_fcgi \
 && service apache2 stop
 
 #Ports
