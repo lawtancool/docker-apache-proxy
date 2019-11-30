@@ -1,3 +1,7 @@
 {
-	"includeForks": true
+	"includeForks": true,
+	"packageRules": [{
+		"packageNames": ["ubuntu"],
+    		"allowedVersions": "<=18.04"
+  	}]
 }
